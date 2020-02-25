@@ -1,0 +1,464 @@
+<!-- restaurant bill--> 
+
+<html>
+<head>
+<title>project</title>
+<script src="bill.js"></script>
+<style>
+
+fieldset{
+height:80%;
+width:70%;
+background-color:rgb(194,214,155);
+border:none;
+border-radius:15px;
+position:absolute;
+margin-top:20px;
+margin-left:20%;
+}
+
+p{
+color:rgb(148,54,52);
+font-family:Segoe Print;
+font-size:20px;
+line-height:40px;
+cursor:pointer;
+}
+p:hover{
+color:rgb(84,141,212);
+}
+#cancle{
+background-color:white;
+font-weight:bold;
+cursor:pointer;
+font-size:20px;
+}
+#cancle:hover{
+background-color:black;
+color:white;
+}
+img{
+border-radius:50px;
+}
+
+
+input{
+height:100%;
+border:none;
+text-align:center;
+font-size:25px;
+color:green;
+}
+#reset{
+height:100%;
+width:100%;
+cursor:pointer;
+background-color:pink;
+}
+
+#print{
+height:100%;
+width:100%;
+cursor:pointer;
+background-color:pink;
+}
+
+caption{
+color:purple;
+text-align:left;
+font-family:algerian;
+font-size:40px;
+}
+span{
+margin-left:5%
+}
+td,th{
+font-size:25px;
+color:maroon;
+}
+table{
+border-collapse:collapse;
+}
+
+</style>
+<script>
+	// First
+function calc()
+{
+   var textValue1 = document.getElementById('Amount_cheese_pepperoni_pizza').value;
+   var textValue2 = document.getElementById('Quantity_cheese_pepperoni_pizza').value;
+   document.getElementById('Total_cheese_pepperoni_pizza').value = textValue1 * textValue2; 
+   total();
+}
+	// second
+function calc2()
+{
+	var textValue1 = document.getElementById('Amount_Non_Veg_Supreme_Pizza').value;
+	var textValue2 = document.getElementById('Quantity_Non_Veg_Supreme_Pizza').value;
+	document.getElementById('Total_Non_Veg_Supreme_Pizza').value = textValue1 * textValue2;
+	total();
+}
+		// third
+function calc3()
+{
+	var textValue1 = document.getElementById('Amount_Deluxe_Veggie_Pizza').value;
+	var textValue2 = document.getElementById('Quantity_Deluxe_Veggie_Pizza').value;
+	document.getElementById('Total_Deluxe_Veggie_Pizza').value = textValue1 * textValue2;
+	total();
+}
+		// fourth
+function calc4()
+{
+	var textValue1 = document.getElementById('Amount_Chef_Veg_Wonder_Pizza').value;
+	var textValue2 = document.getElementById('Quantity_Chef_Veg_Wonder_Pizza').value;
+	document.getElementById('Total_Chef_Veg_Wonder_Pizza').value = textValue1 * textValue2;
+	total();
+}
+		// fifth
+function calc5()
+{
+	var textValue1 = document.getElementById('Amount_Peppy_Paneer_Pizza').value;
+	var textValue2 = document.getElementById('Quantity_Peppy_Paneer_Pizza').value;
+	document.getElementById('Total_Peppy_Paneer_Pizza').value = textValue1 * textValue2;
+	total();
+}
+			// sixth
+function calc6()
+{
+	var textValue1 = document.getElementById('Amount_Chicken_Dominator_Pizza').value;
+	var textValue2 = document.getElementById('Quantity_Chicken_Dominator_Pizza').value;
+	document.getElementById('Total_Chicken_Dominator_Pizza').value = textValue1 * textValue2;
+	total();
+}
+			// seventh
+function calc7()
+{
+	var textValue1 = document.getElementById('Amount_Veg_Greek_Salad').value;
+	var textValue2 = document.getElementById('Quantity_Veg_Greek_Salad').value;
+	document.getElementById('Total_Veg_Greek_Salad').value = textValue1 * textValue2;
+	total();
+}
+			// eight
+function calc8(){
+	var textValue1 = document.getElementById('Amount_Veg_Ceasar_Salad').value;
+	var textValue2 = document.getElementById('Quantity_Veg_Ceasar_Salad').value;
+	document.getElementById('Total_Veg_Ceasar_Salad').value = textValue1 * textValue2;
+	total();
+}
+			// nine
+function calc9(){
+	var textValue1 = document.getElementById('Amount_Chicken_Ceaser_Salad').value;
+	var textValue2 = document.getElementById('Quantity_Chicken_Ceaser_Salad').value;
+	document.getElementById('Total_Chicken_Ceaser_Salad').value = textValue1 * textValue2;
+	total();
+}
+			// ten
+function calc10(){
+	var textValue1 = document.getElementById('Amount_Chicken_Greek_Salad').value;
+	var textValue2 = document.getElementById('Quantity_Chicken_Greek_Salad').value;
+	document.getElementById('Total_Chicken_Greek_Salad').value = textValue1 * textValue2;
+	total();
+}
+			// eleven
+function calc11(){
+	var textValue1 = document.getElementById('Amount_Veg_Platter').value;
+	var textValue2 = document.getElementById('Quantity_Veg_Platter').value;
+	document.getElementById('Total_Veg_Platter').value = textValue1 * textValue2;
+	total();
+}
+			// twelve
+function calc12(){
+	var textValue1 = document.getElementById('Amount_Paneer_Tikka').value;
+	var textValue2 = document.getElementById('Quantity_Paneer_Tikka').value;
+	document.getElementById('Total_Paneer_Tikka').value = textValue1 * textValue2;
+	total();
+}
+			// thirtheen
+function calc13(){
+	var textValue1 = document.getElementById('Amount_Tandoori_Mushroom').value;
+	var textValue2 = document.getElementById('Quantity_Tandoori_Mushroom').value;
+	document.getElementById('Total_Tandoori_Mushroom').value = textValue1 * textValue2;
+	total();
+}
+			// fourteen
+function calc14(){
+	var textValue1 = document.getElementById('Amount_Tandoori_Babycorn').value;
+	var textValue2 = document.getElementById('Quantity_Tandoori_Babycorn').value;
+	document.getElementById('Total_Tandoori_Babycorn').value = textValue1 * textValue2;
+	total();
+}
+			// Total Amount
+function total()
+{
+	a = (parseInt($('#Total_cheese_pepperoni_pizza').val()))? parseInt($('#Total_cheese_pepperoni_pizza').val()) : 0;
+	b = (parseInt($('#Total_Non_Veg_Supreme_Pizza').val()))? parseInt($('#Total_Non_Veg_Supreme_Pizza').val()) : 0;
+	c = (parseInt($('#Total_Deluxe_Veggie_Pizza').val()))? parseInt($('#Total_Deluxe_Veggie_Pizza').val()) : 0;
+	d = (parseInt($('#Total_Chef_Veg_Wonder_Pizza').val()))? parseInt($('#Total_Chef_Veg_Wonder_Pizza').val()) : 0;
+	e = (parseInt($('#Total_Peppy_Paneer_Pizza').val()))? parseInt($('#Total_Peppy_Paneer_Pizza').val()) : 0;
+	f = (parseInt($('#Total_Chicken_Dominator_Pizza').val()))? parseInt($('#Total_Chicken_Dominator_Pizza').val()) : 0;
+	g = (parseInt($('#Total_Veg_Greek_Salad').val()))? parseInt($('#Total_Veg_Greek_Salad').val()) : 0;
+	h = (parseInt($('#Total_Veg_Ceasar_Salad').val()))? parseInt($('#Total_Veg_Ceasar_Salad').val()) : 0;
+	i = (parseInt($('#Total_Chicken_Ceaser_Salad').val()))? parseInt($('#Total_Chicken_Ceaser_Salad').val()) : 0;
+	j = (parseInt($('#Total_Chicken_Greek_Salad').val()))? parseInt($('#Total_Chicken_Greek_Salad').val()) : 0;
+	k = (parseInt($('#Total_Veg_Platter').val()))? parseInt($('#Total_Veg_Platter').val()) : 0;
+	l = (parseInt($('#Total_Paneer_Tikka').val()))? parseInt($('#Total_Paneer_Tikka').val()) : 0;
+	m = (parseInt($('#Total_Tandoori_Mushroom').val()))? parseInt($('#Total_Tandoori_Mushroom').val()) : 0;
+	n = (parseInt($('#Total_Tandoori_Babycorn').val()))? parseInt($('#Total_Tandoori_Babycorn').val()) : 0;
+    var total_amounts = a+b+c+d+e+f+g+h+i+j+k+l+m+n; 
+	$("#total_amount").val(total_amounts);
+	console.log(total_amounts);
+}
+			// Bill Printing
+function Print()
+{
+	window.print();
+}
+function dt()
+{
+	var today = new Date();
+	hr = today.getHours();
+	min = today.getMinutes();
+	sec = today.getSeconds();
+	y = today.getFullYear()
+	m = today.getMonth()+1;
+	d = today.getDate();
+	document.getElementById('date').innerHTML='Time '+' '+hr+':'+min+':'+sec+' AM'+' &nbsp; &nbsp; '+'Date '+' '+d+'-'+m+'-'+y;
+	if(hr>12)
+	{
+		hr=hr-12;
+		document.getElementById('date').innerHTML='Time '+' '+hr+':'+min+':'+sec+' PM'+' &nbsp; &nbsp; '+'Date '+' '+d+'-'+m+'-'+y;
+	}
+
+}
+
+function hide()
+{
+	document.getElementById('fieldset').style.display='none';
+}
+function color(){
+	document.getElementById('reset').style.backgroundColor='#b1b1b1';
+}
+function color1(){
+	document.getElementById('reset').style.backgroundColor='pink';
+}
+function color2(){
+	document.getElementById('print').style.backgroundColor='#b1b1b1';
+}
+function color3(){
+	document.getElementById('print').style.backgroundColor='pink';
+}
+</script>
+
+</head>
+<body leftmargin='13%' topmargin='1%' onload='dt()'>
+<form name='frm'>
+<table border='2' width='60%' height='50%'>
+<caption >Bar la PARATHA<span id='date' style="font-size:30px;"></span></caption>
+
+<tr bgcolor='#b1b1b1'>
+<th>Items</th>
+<th>Amount</th>
+<th>Quantity</th>
+<th>Total(Rs.)</th></tr>
+
+<!--table menu-->
+<tr>
+	<td align='center'>Cheese & Pepperoni Pizza</td>
+	<td align='center'>
+		<input type='text' name='Amount_cheese_pepperoni_pizza' id='Amount_cheese_pepperoni_pizza' value=129 readonly />
+	</td>
+	<td align='center'>
+		<input type='text' onkeyup="calc()" name='Quantity_cheese_pepperoni_pizza' id='Quantity_cheese_pepperoni_pizza' maxlength='3' />
+	</td>
+	<td id='total'>
+		<input type='text' name='Total_cheese_pepperoni_pizza' id='Total_cheese_pepperoni_pizza' readonly value="" />
+	</td>
+</tr>
+<tr>
+	<td align='center'>Non Veg Supreme Pizza</td>
+	<td align='center'>
+		<input type='text' onkeyup="calc2()" name='Amount_Non_Veg_Supreme_Pizza' id='Amount_Non_Veg_Supreme_Pizza' value=199 readonly />
+	</td>
+	<td align='center'>
+		<input type='text' name='Quantity_Non_Veg_Supreme_Pizza' id='Quantity_Non_Veg_Supreme_Pizza' maxlength='3' onkeyup="calc2()" />
+	</td>
+	<td id='total'>
+		<input type='text' name='Total_Non_Veg_Supreme_Pizza' id='Total_Non_Veg_Supreme_Pizza' readonly />
+	</td>
+</tr>
+<tr>
+	<td align='center'>Deluxe Veggie Pizza</td>
+	<td align='center'>
+		<input type='text' onkeyup="calc3()" name='Amount_Deluxe_Veggie_Pizza' id='Amount_Deluxe_Veggie_Pizza' value=129 readonly />
+	</td>
+	<td align='center'>
+		<input type='text' name='Quantity_Deluxe_Veggie_Pizza' id='Quantity_Deluxe_Veggie_Pizza' maxlength='3' onkeyup="calc3()" />
+	</td>
+	<td id='total'>
+		<input type='text' name='Total_Deluxe_Veggie_Pizza' id='Total_Deluxe_Veggie_Pizza' readonly /></td>
+</tr>
+<tr>
+	<td align='center'>Chef Veg Wonder Pizza</td>
+	<td align='center'>
+		<input type='text' onkeyup="calc4()" name='Amount_Chef_Veg_Wonder_Pizza' id='Amount_Chef_Veg_Wonder_Pizza' value=129 readonly />
+	</td>
+	<td align='center'>
+		<input type='text' onkeyup="calc4()" name='Quantity_Chef_Veg_Wonder_Pizza' id='Quantity_Chef_Veg_Wonder_Pizza' maxlength='3' />
+	</td>
+	<td id='total'>
+		<input type='text' name='Total_Chef_Veg_Wonder_Pizza' id='Total_Chef_Veg_Wonder_Pizza' readonly />
+	</td>
+</tr>
+
+<tr>
+	<td align='center'>Peppy Paneer Pizza</td>
+	<td align='center'>
+		<input type='text' onkeyup="calc5()" name='Amount_Peppy_Paneer_Pizza' id='Amount_Peppy_Paneer_Pizza' value=149 readonly />
+	</td>
+	<td align='center'>
+		<input type='text' onkeyup="calc5()" name='Quantity_Peppy_Paneer_Pizza' id='Quantity_Peppy_Paneer_Pizza' maxlength='3'/>
+	</td>
+	<td id='total'>
+		<input type='text' name='Total_Peppy_Paneer_Pizza' id='Total_Peppy_Paneer_Pizza' readonly />
+	</td>
+</tr>
+
+<tr>
+	<td align='center'>Chicken Dominator Pizza</td>
+	<td align='center'>
+		<input type='text' onkeyup="calc6()" name='Amount_Chicken_Dominator_Pizza' id='Amount_Chicken_Dominator_Pizza' value=199 readonly />
+	</td>
+	<td align='center'>
+		<input type='text' onkeyup="calc6()" name='Quantity_Chicken_Dominator_Pizza' id='Quantity_Chicken_Dominator_Pizza' maxlength='3'/>
+	</td>
+	<td id='total'>
+		<input type='text' name='Total_Chicken_Dominator_Pizza' id='Total_Chicken_Dominator_Pizza' readonly />
+	</td>
+</tr>
+
+<tr>
+	<td align='center'>Veg Greek Salad</td>
+	<td align='center'>
+		<input type='text' onkeyup="calc7()" name='Amount_Veg_Greek_Salad' id='Amount_Veg_Greek_Salad' value=135 readonly />
+	</td>
+	<td align='center'>
+		<input type='text' onkeyup="calc7()" name='Quantity_Veg_Greek_Salad' id='Quantity_Veg_Greek_Salad' maxlength='3'/></td>
+	<td id='total'>
+		<input type='text' name='Total_Veg_Greek_Salad' id='Total_Veg_Greek_Salad' readonly />
+	</td>
+</tr>
+
+<tr>
+	<td align='center'>Veg Ceasar Salad</td>
+	<td align='center'>
+		<input type='text' onkeyup="calc8()" name='Amount_Veg_Ceasar_Salad' id='Amount_Veg_Ceasar_Salad' value=135 readonly />
+	</td>
+	<td align='center'>
+		<input type='text' onkeyup="calc8()" name='Quantity_Veg_Ceasar_Salad' id='Quantity_Veg_Ceasar_Salad' maxlength='3'/>
+	</td>
+	<td id='total'>
+		<input type='text' name='Total_Veg_Ceasar_Salad' id='Total_Veg_Ceasar_Salad' readonly />
+	</td>
+</tr>
+
+<tr>
+	<td align='center'>Chicken Ceaser Salad</td>
+	<td align='center'>
+		<input type='text' onkeyup="calc9()" name='Amount_Chicken_Ceaser_Salad' id='Amount_Chicken_Ceaser_Salad' value=160 readonly />
+	</td>
+	<td align='center'>
+		<input type='text' onkeyup="calc9()" name='Quantity_Chicken_Ceaser_Salad' id='Quantity_Chicken_Ceaser_Salad' maxlength='3'/>
+	</td>
+	<td id='total'>
+		<input type='text' name='Total_Chicken_Ceaser_Salad' id='Total_Chicken_Ceaser_Salad' readonly />
+	</td>
+</tr>
+
+<tr>
+	<td align='center'>Chicken Greek Salad</td>
+	<td align='center'>
+		<input type='text' onkeyup="calc10()" name='Amount_Chicken_Greek_Salad' id='Amount_Chicken_Greek_Salad' value=160 readonly />
+	</td>
+	<td align='center'>
+		<input type='text' onkeyup="calc10()" name='Quantity_Chicken_Greek_Salad' id='Quantity_Chicken_Greek_Salad' maxlength='3'/>
+	</td>
+	<td id='total'>
+		<input type='text' name='Total_Chicken_Greek_Salad' id='Total_Chicken_Greek_Salad' readonly />
+	</td>
+</tr>
+
+<tr>
+	<td align='center'>Todays Soup</td>
+	<td align='center'>
+		<input type='text' onkeyup="calc11()" name='Amount_Veg_Platter' id='Amount_Veg_Platter' value=250 readonly />
+	</td>
+	<td align='center'>
+		<input type='text' onkeyup="calc11()" name='Quantity_Veg_Platter' id='Quantity_Veg_Platter' maxlength='3'/>
+	</td>
+	<td id='total'>
+		<input type='text' name='Total_Veg_Platter' id='Total_Veg_Platter' readonly />
+	</td>
+</tr>
+
+<tr>
+	<td align='center'>Paneer Tikka</td>
+	<td align='center'>
+		<input type='text' onkeyup="calc12()" name='Amount_Paneer_Tikka' id='Amount_Paneer_Tikka' value=240 readonly />
+	</td>
+	<td align='center'>
+		<input type='text' onkeyup="calc12()" name='Quantity_Paneer_Tikka' id='Quantity_Paneer_Tikka' maxlength='3'/>
+	</td>
+	<td id='total'>
+		<input type='text' name='Total_Paneer_Tikka' id='Total_Paneer_Tikka' readonly />
+	</td>
+</tr>
+
+<tr>
+	<td align='center'>Tandoori Mushroom</td>
+	<td align='center'>
+		<input type='text' onkeyup="calc13()" name='Amount_Tandoori_Mushroom' id='Amount_Tandoori_Mushroom' value=230 readonly />
+	</td>
+	<td align='center'>
+		<input type='text' onkeyup="calc13()" name='Quantity_Tandoori_Mushroom' id='Quantity_Tandoori_Mushroom' maxlength='3' />
+	</td>
+	<td id='total'>
+		<input type='text' name='Total_Tandoori_Mushroom' id='Total_Tandoori_Mushroom' readonly />
+	</td>
+</tr>
+<tr>
+	<td align='center'>Tandoori Babycorn</td>
+	<td align='center'>
+		<input type='text' onkeyup="calc14()" name='Amount_Tandoori_Babycorn' id='Amount_Tandoori_Babycorn' value=250 readonly />
+	</td>
+	<td align='center'>
+		<input type='text' onkeyup="calc14()" name='Quantity_Tandoori_Babycorn' id='Quantity_Tandoori_Babycorn' maxlength='3'>
+	</td>
+	<td id='total'>
+		<input type='text' name='Total_Tandoori_Babycorn' id='Total_Tandoori_Babycorn' readonly />
+	</td>
+</tr>
+
+<!--Buttons -->
+<tr>
+	<td align='center' bgcolor='pink'>
+		<input type='reset' name='reset' id='reset' value='Clear all' onmouseover='color()' onmouseout='color1()' >
+	</td>
+	<td align='center' bgcolor='pink'>Bill Amount </td>
+	<td bgcolor='pink' align='center'>
+		<input type='button' name='print' id='print' value='Print Bill' onclick='Print()' onmouseover='color2()' onmouseout='color3()'>
+	</td>
+	<td bgcolor='pink'>
+		<input style='background-color:pink;' type='text' name='total_amount' id='total_amount' />
+	</td>
+</tr>
+	<tr>
+	<td colspan='4' align='center' bgcolor='#f1f1f1'><marquee  behavior='slide'><span style='color:purple; font-family:algerian; font-size:25px;'> <u>THANK YOU</u></span></marquee></td>
+</tr>
+
+</table>
+
+</form>
+
+
+</body>
+</html>
